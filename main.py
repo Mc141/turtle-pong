@@ -60,6 +60,7 @@ for number in range(1, 21):
 
 
 
+
 game_is_running = True
 
 while game_is_running:
@@ -67,16 +68,11 @@ while game_is_running:
     screen.update()
 
 
-
-
-
-
-
-
-
-
+    screen.onkey(player_1.up, "w")
+    screen.onkey(player_1.down, "s")
+    screen.onkey(player_2.up, "Up")
+    screen.onkey(player_2.down, "Down")
     screen.listen()
-
 
 
 
