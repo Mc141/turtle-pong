@@ -59,8 +59,6 @@ for number in range(1, 21):
 
 
 
-
-
 game_is_running = True
 
 while game_is_running:
@@ -73,6 +71,9 @@ while game_is_running:
     screen.onkey(player_2.up, "Up")
     screen.onkey(player_2.down, "Down")
     screen.listen()
+
+
+    ball.forward(30)
 
 
 

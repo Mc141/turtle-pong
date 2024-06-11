@@ -16,4 +16,3 @@ class Player(Turtle):
          if self.ycor() >= -350:   
             new_y = self.ycor() - 50
             self.goto(self.xcor(), new_y)
-
