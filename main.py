@@ -4,6 +4,7 @@ from time import sleep
 from ball import Ball
 from player import Player
 from scoreboard import Scoreboard
+from random import randint
 
 screen_width = 1500
 screen_height = 900
@@ -14,6 +15,7 @@ screen.bgcolor("black")
 screen.setup(screen_width, screen_height)
 screen._root.resizable(False, False)
 screen.tracer(0)
+screen.title("Pong")
 
 turtle = Turtle()
 turtle.color("white")
@@ -62,7 +64,7 @@ for number in range(1, 21):
 game_is_running = True
 
 while game_is_running:
-    sleep(0.1)
+    sleep(0.07)
     screen.update()
 
 
@@ -73,7 +75,24 @@ while game_is_running:
     screen.listen()
 
 
+
+
+    if ball.ycor() >= 400:
+        ball.setheading(randint(200, 340))
+    elif ball.ycor() <= -400:
+        ball.setheading(randint(20, 160))
+
+
+
+
+
     ball.forward(30)
+
+
+
+
+
+
 
 
 
